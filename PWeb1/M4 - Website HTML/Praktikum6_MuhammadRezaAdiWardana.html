@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 6</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* background-color: silver; */
+        }
+        .container{
+            width: 80vw;
+            height: 100vh;
+            display: grid;
+            margin: auto;
+            justify-content:center;
+            grid-template-rows: 20vh 70vh auto;
+            background-color:rgb(0, 0, 0);
+        }
+        .container .header {
+            display: grid;
+            width:100em;
+            grid-template-rows: 70% 30%;
+            background-color: rgb(255, 115, 0); 
+        }
+        .container .header div{
+            margin: 5px;
+            border-radius: 10px;
+            background-color:rgb(253, 226, 176);
+        }
+        .header .logo  {
+            align-items: center;
+            display: grid;
+            grid-template-columns: 60px auto;
+        }
+        .navbar{
+            text-align: center;
+            font-size: 20px;
+        }
+        .navbar a{
+            color: black;
+            text-decoration: none;
+            margin: 0 20px;
+            
+        }
+        .mainbar{
+            display: grid;
+            grid-gap: 0.5%;
+            grid-template-columns: 59.5% 40%;
+            font-size: 20px;
+        }
+        .mainbar div  {
+            padding: 20px;
+            background-color:rgb(255, 199, 95);
+
+        }
+        .sidebar iframe{
+         height: 100%;
+         width: 100%;
+        }
+        .footer{
+            background-color: rgb(255, 115, 0); 
+            display: grid;
+            align-items: center;
+            font-size: 20px;
+            grid-template-rows: 60% 40%;
+            padding: 10px;
+        }
+        .footer div{
+            display: grid;
+            font-size: 30px;
+            align-items: center;
+            grid-template-columns: 40px  auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div>
+                    <img src="logopolibang.png" widht="55px" height="55px" alt="">
+                </div>
+                <div>
+                    <h1>POLITEKNIK BALEKAMBANG</h1>
+                    <p>Excelent And Characters Building</p>
+                    <H2>Rekayasa Perangkat Lunak</H2>
+                </div>
+                </div>
+           
+            <div class="navbar">
+                <a href="#" class="Beranda">Beranda</a>
+                <a href="#" class="Kontak">Kontak</a>
+                <a href="http://wwww.polibang.ac.id" class="Tentang">Tentang</a>
+                <a href="form_muhammadRezaAdiWardana.html" class="Daftar">Daftar</a>
+            </div>
+        </div>
+        <div class="mainbar">
+            <div class="content">
+                <h2 align="center">VISI MISI POLIBANG</h2><br>
+                <h3>VISI</h3>
+                <b>Menjadi Politeknik yang Berdaya Saing Global, Professional dan beraqidah Ahlus Sunnah Wal Jama’ah</b>
+                <br><br>
+                <h3>MISI</h3>
+                <ol>
+                    <li>Menyelenggarakan dan mengembangkan pendidikan yang mampu berdaya saing dalam era globalisasi</li>
+                    <li>Menyelenggarakan dan menghasilkan pendidikan yang profesional sesuai dengan prinsip good university governance;</li>
+                    <li>Membangun komunitas yang ikhlas, toleransi, moderat dan religi dalam menjaga Negara Kesatuan Republik Indonesia;</li>
+                    <li>Melaksanakan Tri Dharma peguruan tinggi.</li>
+                </ol>
+            </div>
+            <div class="sidebar">
+                <iframe src="../M3 - Tag, Element, Atribut HTML/Praktikum4_MuhammadRezaAdiWardana.php" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+            <img src="logopolibang.png" widht="40px" height="40px" alt="">
+            <b>POLITEKNIK BALEKAMBANG JEPARA</b>
+            </div>
+            <p>Muhammad Reza Adi Wardana</p>
+        </div>
+    </div>
+</body>
+</html>

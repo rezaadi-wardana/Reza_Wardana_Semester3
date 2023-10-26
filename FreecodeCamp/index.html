@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurveyForm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="title">
+    <h1 id="title">Formulir Survey Untuk freeCodeCamp</h1>
+    <p id="description">Selamt Datang Di Formulir Hasil Tugas Saya, Tolong bantu isi ya..</p>
+    </div>
+
+    <form id="survey-form">
+        
+        <div class="name">
+        <label for="name" id="name-label"> Nama</label>
+        <input type="text" id="name" placeholder="masukkan nama" required>
+        </div>
+
+        <div class="email">
+        <label for="email" id="email-label">Email</label>
+        <input type="email" id="email" placeholder="masukkan email" required>
+        </div>
+        
+        <div class="age">
+        <label for="number" id="number-label">Umur</label>
+        <input type="number" id="number" placeholder="masukkan umur" min="13" max="99">
+        </div>
+
+        <div class="dropdown">
+        <select name="dropdown" id="dropdown">
+           <option disabled="" selected="" value="">Pilih Salah Satu</option>
+           <option value="student">Pelajar/Mahasiswa</option> 
+           <option value="full_time_job">Pekerja Tetap</option> 
+           <option value="full_time_Leaner">Pekerja Lepas</option> 
+           <option value="prefer">Tidak ingin diketahui</option> 
+           <option value="other">Lainnya</option> 
+        </select>
+        </div>
+        
+        <div class="recomend">
+        <p>Apakah Freecodecamp Cocok Untuk Temanmu?</p>
+            <label><input name="user-recommend" value="definitely" type="radio" class="input-radio" checked="">Tentu Saja</label>        
+            <label><input name="user-recommend" value="maybe" type="radio" class="input-radio" checked="">Mungkin</label>
+            <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio">Tidak Yakin</label>
+        </div>
+        
+            <div class="form-group">
+                <p>
+              Apa Yang Ingin Kamu Kembangkan?
+                  <span class="clue">(Pilih beberapa)</span>
+                </p>
+      
+                <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox">Front-end Projects</label>
+                <label><input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox">Back-end Projects</label>
+                <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox">Data Visualization</label>
+                <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox">Challenges</label>
+                <label><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox">Open Source Community</label>
+                <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox">Gitter help rooms</label>
+                <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox">Videos</label>
+                <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox">City Meetups</label>
+                <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox">Wiki</label>
+                <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox">Forum</label>
+                <label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox">Additional Courses</label>
+            </div>
+
+              <div>
+                <div class="form-group">
+                    <p>Silahkan Masukkan Kritik dan Saran?</p>
+                    <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+                </div>
+              </div>
+
+            <div>
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">
+                      Kirim
+                    </button>
+                </div>
+            </div>
+        
+    </form>
+</div>
+</body>
+</html>

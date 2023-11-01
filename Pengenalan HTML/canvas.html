@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Canvas</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200" style="border:1px solid black;"></canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+
+        // Gambar segitiga
+        context.beginPath();
+        context.moveTo(100, 10);
+        context.lineTo(150, 100);
+        context.lineTo(50, 100);
+        context.closePath();
+
+        // Beri warna segitiga
+        context.fillStyle = 'blue';
+        context.fill();
+
+        // Beri garis tepi segitiga
+        context.lineWidth = 3;
+        context.strokeStyle = 'red';
+        context.stroke();
+    </script>
+</body>
+</html>

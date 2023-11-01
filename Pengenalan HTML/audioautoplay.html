@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Autoplay</title>
+</head>
+<body>
+    <audio id="autoplay-video" controls autoplay>
+        <source src="musik.mp3" type="audio/mpeg">
+        Your browser does not support the video tag.
+    </audio>
+
+    <script>
+        window.onload = function() {
+            // Dapatkan elemen video
+            var video = document.getElementById('autoplay-video');
+            
+            // Jalankan video saat halaman dimuat
+            video.play();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 2px solid black; */
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: 270px 730px;
+    height: 200vh;
+    margin: 0 auto;
+    box-shadow: -5px -60px 60px 20px black;
+}
+/* =========================================================== */
+.sidebar{
+    display: grid;
+    grid-template-rows: 270px 40px 150px 40px auto ;
+    background-color: white;
+    border-right: 20px solid white;
+    border-radius: 50px 0 0 0;
+}
+.sidebar .logo {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.sidebar h2{
+    color: white;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #641a4d;
+    border-radius: 0 20px 0 0;
+}
+.sidebar ul {
+    padding-left: 26px;
+    font-size: 15px;
+    color:#240119;
+}
+.sidebar ul li {
+    font-weight: 500;
+    padding-left: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px ;
+}
+.sidebar ul :hover {
+    background-color: #A3067B;
+    color: white;
+}
+/* =========================================================== */
+
+
+
+.mainbar{
+    display: grid;
+    grid-template-rows: 300px 40px auto ;
+    height: 110rem;
+}
+
+.mainbar .header {
+    background-image: url("../img/header.jpg");
+    background-size: cover;
+    border-radius:0 0 40px 0 ;
+    display: flex;
+    align-items:last baseline;
+    justify-content:flex-end;
+    text-align: right;
+    color: white;
+    /* background-color: transparent; */
+}
+.mainbar .header .tulisan {
+    margin-right: 3em;
+    margin-bottom: 2em;
+}
+.mainbar .header .tulisan h1 {
+    font-size: 2.2em;
+}
+.mainbar .header .tulisan p {
+    font-size: 15px;
+} 
+
+.mainbar .navbar {
+    background-color: #240119;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    text-align: center;
+    align-items: center;
+    border-top: white 2px solid;
+}
+.mainbar .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+}
+.mainbar .navbar a:hover {
+background-color:#A3067B;
+align-items: center;
+}
+.mainbar .navbar a:after {
+background-color:#A3067B;
+align-items: center;
+}
+.mainbar .main {
+    background-color: white;
+
+}
+
+/* =========================================================== */
+
+.footer{    
+    background-color:#3d0f32;
+    z-index: 999;
+    height: 110px;
+    width: 1000px;
+    margin: 0 auto ;
+    border-radius: 60px  0  0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+

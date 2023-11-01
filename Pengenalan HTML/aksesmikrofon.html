@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Akses Mikrofon</title>
+</head>
+<body>
+  <h1>Akses Mikrofon</h1>
+  <button id="startButton">Mulai Rekaman</button>
+  <audio id="audioElement" controls></audio>
+
+  <script>
+    const startButton = document.getElementById('startButton');
+    const audio = document.getElementById('audioElement');
+
+    startButton.addEventListener('click', async function() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        audio.srcObject = stream;
+      } catch (err) {
+        console.error('Tidak dapat mengakses mikrofon: ', err);
+      }
+    });
+  </script>
+</body>
+</html>

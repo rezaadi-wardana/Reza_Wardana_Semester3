@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Akses Kamera</title>
+</head>
+<body>
+  <h1>Akses Kamera</h1>
+  <video id="videoElement" width="640" height="480" autoplay></video>
+  <button id="startButton">Mulai Kamera</button>
+
+  <script>
+    const startButton = document.getElementById('startButton');
+    const video = document.getElementById('videoElement');
+
+    // Fungsi untuk mulai kamera
+    startButton.addEventListener('click', async function() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        video.srcObject = stream;
+      } catch (err) {
+        console.error('Tidak dapat mengakses kamera: ', err);
+      }
+    });
+  </script>
+</body>
+</html>

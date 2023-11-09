@@ -44,20 +44,35 @@ body{
     border-radius: 0 20px 0 0;
 }
 .sidebar ul {
-    padding-left: 26px;
     font-size: 15px;
     color:#240119;
+    list-style: none;
+    
 }
 .sidebar ul li {
     font-weight: 500;
     padding-left: 20px;
     padding-top: 2px;
     padding-bottom: 2px ;
+    
 }
-.sidebar ul :hover {
+.sidebar details li :hover, .sidebar ul :hover {
     background-color: #A3067B;
     color: white;
 }
+
+.sidebar details summary:first-of-type{
+    list-style: none;
+}
+.sidebar summary{
+    cursor: pointer;
+}
+.sidebar details ul li a  {
+    text-decoration: none;
+    color: #641a4d;
+}
+
+
 /* =========================================================== */
 
 

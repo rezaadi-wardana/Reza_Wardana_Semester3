@@ -47,29 +47,55 @@ body{
     font-size: 15px;
     color:#240119;
     list-style: none;
+    line-height: 2em;
     
 }
-.sidebar ul li {
-    font-weight: 500;
-    padding-left: 20px;
-    padding-top: 2px;
-    padding-bottom: 2px ;
+ ul li {
+    margin-left: 20px;
+    font-weight: 500; 
+    position: relative;
+ 
     
 }
-.sidebar details li :hover, .sidebar ul :hover {
+.sidebar ul li::before{
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    border-left: 2px solid rebeccapurple;
+    content: "";
+    width: 8px;
+    height: 30px ;
+}
+/* .sidebar details li :hover, .sidebar ul :hover {
     background-color: #A3067B;
     color: white;
-}
+} */
 
 .sidebar details summary:first-of-type{
     list-style: none;
 }
-.sidebar summary{
+ul summary{
     cursor: pointer;
 }
-.sidebar details ul li a  {
+ul details ul li a  {
     text-decoration: none;
     color: #641a4d;
+}
+ul summary::marker{
+    display: none;
+}
+ul summary::-webkit-details-marker{
+    display: none  ;
+}
+
+ul li ::after{
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    border-left: 2px solid rebeccapurple;
+    content: "";
+    width: 8px;
+    height: 20px ;
 }
 
 

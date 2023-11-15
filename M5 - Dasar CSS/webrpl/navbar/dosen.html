@@ -27,16 +27,23 @@
         width: 100px;
         height : 100px;
        }
+       .dosen {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        justify-items: center;
+       }
     </style>
 </head>
 <body>
     <h2>DOSEN PRODI REKAYASA PERANGKAT LUNAK</h2>
     <P>Tenaga Pengajar Politeknik Balekambang Jepara</P>
-    <ol>
-       <img src="../assets/img/dosen.jpg" alt="Dosen"> <li>Indra Kurniawan, M.Kom</li>
-       <img src="../assets/img/dosen.jpg" alt="Dosen"> <li>Ahlis Noor Kholili, M.Kom</li>
-       <img src="../assets/img/dosen.jpg" alt="Dosen"> <li>Ahmad Faiq Abror,M.Pd.</li>
-       <img src="../assets/img/dosen.jpg" alt="Dosen"> <li>Shofia Ulfah, M.Kom</li>
-       <img src="../assets/img/dosen.jpg" alt="Dosen"> <li>Alvin Rainaldy Hakim, M.Kom</li>
+    <div class="dosen">
+       <div><img src="../assets/img/dosen.jpg" alt="Dosen"> <p><b> Kurniawan, M.Kom</b></p></div>
+       <div><img src="../assets/img/dosen.jpg" alt="Dosen"> <p><b>Ahlis Noor Kholili, M.Kom</b></p></div>
+       <div><img src="../assets/img/dosen.jpg" alt="Dosen"> <p><b>Ahmad Faiq Abror,M.Pd.</b></p></div>
+       <div><img src="../assets/img/dosen.jpg" alt="Dosen"> <p><b>Shofia Ulfah, M.Kom</b></p></div>
+       <div><img src="../assets/img/dosen.jpg" alt="Dosen"> <p><b>Alvin Rainaldy Hakim, M.Kom</b></p></div>
+    </div>
 </body>
 </html>

@@ -33,12 +33,12 @@ http://www.tooplate.com/view/2098-health
   }
 
   h1 {
-    color: #252525;
+    color: #1f1f1f;
     font-size: 5em;
   }
 
   h2 {
-    color: #272727;
+    color: #202020;
     font-size: 3em;
     padding-bottom: 10px;
   }
@@ -50,7 +50,7 @@ http://www.tooplate.com/view/2098-health
   }
 
   h4 {
-    color: #454545;
+    color: #333333;
     font-size: 1.8em;
     padding-bottom: 2px;
   }
@@ -61,12 +61,14 @@ http://www.tooplate.com/view/2098-health
   }
 
   p {
-    color: #757575;
+    color: #444444;
     font-size: 14px;
     font-weight: normal;
     line-height: 24px;
   }
-
+#about p{
+  font-size: 16px;
+}
 
   /*---------------------------------------
      GENERAL               

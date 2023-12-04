@@ -1,0 +1,47 @@
+body {
+    background-color: #f0f0f0;
+}
+.navbar h3{
+ margin: 0 1em;
+}
+.navbar {
+    padding-left: 6em;
+    padding-right: 5em;
+}
+.navbar .d-flex .btn {
+    border: none;
+    background-color: rgb(255, 145, 0);
+    color: yellow;
+}
+
+#carouselExampleIndicators .carousel-inner{
+    height: 100vh;
+}
+h2{
+    font-size: 2.5em;
+}
+h3{
+    font-size: 1.5em;
+}
+
+
+#kategori, #pelayanan{
+    padding: 100px 0;
+} 
+.heading-kategori {
+    padding: 2em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#pelayanan .row .col .card{
+    background-color: transparent;
+    border: none;
+}
+#pelayanan  {
+    background-color: orange;
+    width: 100vw;
+    position: relative;
+}

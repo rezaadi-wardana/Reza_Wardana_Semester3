@@ -13,19 +13,21 @@
  
      <nav class="navbar d-flex justify-content-lg-start bg-warning fixed-top" >
         <!-- Navbar content -->
+        <div class="logo">
         <img src="assets/img/logoRCIF.png" alt="" height="40px" >
-        <h3>Beranda</h3>
-        <h3>Produk</h3>
-        <h3>Tentang</h3>
-        <h3>Pesan</h3>
-        <form class="d-flex flex-grow-1" role="search" style="margin: 1em;">
+      </div>
+        <a href="#top"><h3>Beranda</h3></a>
+        <a href="produk.html"><h3>Produk</h3></a>
+        <a href="tentang.html"><h3>Tentang</h3></a>
+        <a href="index.html#pesan" id="tbpsn"><h3>Pesan</h3></a>
+        <form class="d-flex flex-grow-1" role="search" style="margin: 0.5em 1.2em;">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
     </nav>
 
 <!-- SLIDER -->
-<div id="carouselExampleIndicators" class="carousel slide">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -58,50 +60,50 @@
       <h2>Belanja Berdasarkan Kategori</h2>
     </div>
     <div class="row-cols-md-5 d-flex">
-        <div class="col">
-            <div class="card" style="width: 18rem;">
+        <div class="col" >
+            <a href=""><div class="card" style="width: 18rem;">
                 <img src="assets/img/card1.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h4>Ruang Tamu</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text" st>Kami menyediakan beberapa furniture yang cocok untuk ruang tamu anda</p>
                 </div>
-              </div>
+              </div></a>
         </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
+        <div class="col" >
+            <a href=""><d`iv class="card" style="width: 18rem;">
                 <img src="assets/img/card2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h4>Caffe</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Kami menyediakan beberapa furniture yang cocok untuk caffe anda</p>
                 </div>
-              </div>
+              </d></a>
         </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
+        <div class="col" >
+            <a href=""><d`iv class="card" style="width: 18rem;">
                 <img src="assets/img/card3.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h4>Taman</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Kami menyediakan beberapa furniture yang cocok untuk taman anda</p>
                 </div>
-              </div>
+              </d></a>
         </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
+        <div class="col" >
+            <a href=""><d`iv class="card" style="width: 18rem;">
                 <img src="assets/img/card4.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h4>Ruang Kerja</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Kami menyediakan beberapa furniture yang cocok untuk ruang kerja anda</p>
                 </div>
-              </div>
+              </d></a>
         </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
+        <div class="col" >
+            <a href=""><d`iv class="card" style="width: 18rem;">
                 <img src="assets/img/card5.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h4>Ruang Makan</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Kami menyediakan beberapa furniture yang cocok untuk ruang makan anda</p>
                 </div>
-              </div>
+              </d></a>
         </div>
       </div>
   </div>
@@ -161,11 +163,140 @@
                     </div>
                   </div>
                 </div>
-              </div> 
-           
+              </div>            
     </div>
 </div>
 </section>
+
+<!-- TESTIMONI -->
+<section id="testimoni">  
+  <div class="container-md-1">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <span class="pesan">Saya sangat puas dengan produk furntiture yang saya beli dari toko ini. Produknya berkualitas, desainnya elegan, dan harganya terjangkau. Pelayanannya juga ramah dan profesional. Saya merekomendasikan toko ini kepada siapa saja yang mencari furntiture terbaik. <br><b>- Erik</b></span>        
+          <img src="assets/img/testimoni1.jpg" class="d-block w-100" alt="...">
+          </div>
+        <div class="carousel-item">
+          <span class="pesan">Produk furntiture dari toko ini sangat memuaskan. Saya suka dengan bahan, warna, dan modelnya. Produknya sesuai dengan gambar dan deskripsi di website. Pengiriman dan pemasangannya juga cepat dan rapi. Saya akan kembali berbelanja di toko ini lagi. <br> <b>- Richard</b>  </span>
+          <img src="assets/img/testimoni2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <span class="pesan">Toko ini menjual produk furntiture yang bagus dan berkualitas. Saya membeli beberapa produk furntiture. Produknya kokoh, nyaman, dan tahan lama. Saya juga mendapat diskon dan gratis ongkir. Saya sangat senang dengan pembelian saya. <br> <b>- Alex</b></span>
+          <img src="assets/img/testimoni3.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- YOUTUBE -->
+
+<section id="youtube">
+  <div class="container">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/S-A0qLTxf-U?si=NaXbffOsx_08tE-j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section id="pesan" style="margin: 0em 20em 5em;">
+  <div class="container bg-warning" style="padding: 2em;">
+  <form>
+    <h1>Pesan Online</h1>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nama Pemesan</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <!-- <div id="emailHelp" class="form-text">Masukan Namamu</div> -->
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">No WhatsApp</label>
+      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">WhatsAppmu harus aktif</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nomor Pesanan</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <!-- <div id="emailHelp" class="form-text">WhatsAppmu harus aktif</div> -->
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <!-- <div id="emailHelp" class="form-text">WhatsAppmu harus aktif</div> -->
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Alamat</label>
+      <input type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Saya siap menerima konsekuensi, Sesuai perauran pemesanan online yang ada.</label>
+    </div>
+    <button type="submit" class="btn bg-warning">Pesan</button>
+  </form>
+</div>
+
+</section>
+  
+<!-- FOOTER -->
+     <!-- FOOTER -->
+    <footer id="footer" style="background-color: rgb(214, 214, 214);">
+      <div class="container-md-1 ">
+      
+           <div class="row justify-content-center">
+            <div class="lgo" style="margin-left: 20em; padding: 2em 0;">
+            <h2>RCIF</h2>
+          </div>
+                <div class="col-5">
+                  
+                     <div class="footer-thumb"> 
+                      
+                          <h4 class="wow fadeInUp" data-wow-delay="0.4s">Info Kontak</h4>
+
+                          <div class="contact-info">
+                              <p>Ada Kendala Hubungi nomor ini</p>
+                               <a href="">WhatsApp</a>
+                               <a href="">E-mail</a>
+                               <a href="">instagram</a>
+                               <a href="">facebook</a>
+                          </div>
+                     </div>
+                </div>
+
+                <div class="col-5"> 
+                     <div class="footer-thumb">
+                          <div class="opening-hours">
+                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">Menu</h4>
+                               <ul class="nav ">
+                                    <li><a href="#top" class="smoothScroll">Beranda</a></li>
+                                    <li><a href="#about1" class="smoothScroll">Produk</a></li>
+                                    <li><a href="#news" class="smoothScroll">Tentang</a></li>
+                                    <li><a href="#news" class="smoothScroll">Kontak</a></li>
+                               </ul>
+                          </div> 
+                     </div>
+                    </div>
+           </div>
+           <br>
+           <div class="row">
+           <div class="col-md-12 col-sm-12 border-top">
+                 <div class="copyright-text justify-content-center d-flex text-bg-warning" style="padding: 1em; width: 100vw;"> 
+                      <p>Copyright &copy; 2023 Muhammad Reza Adi Wardana
+                      
+                      </p>
+                 </div>
+          
+          </div>
+       </div>
+      </div>
+   </footer>
+
 
 
  <script src="bootstrap/js/bootstrap.min.js"></script>

@@ -10,9 +10,30 @@ body {
 }
 .navbar .d-flex .btn {
     border: none;
-    background-color: rgb(255, 145, 0);
-    color: yellow;
+    background-color: rgb(255, 123, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
 }
+.navbar a{
+    color: black;
+    text-decoration: none;
+    padding: 10px 0  ;
+}
+.navbar a:hover {
+    background-color: yellow;
+    border-radius: 5px;
+}
+#tbpsn{
+color: rgb(0, 0, 0);
+background-color: yellow;
+}
+
+nav .logo{
+
+    margin-right: 20px;
+}
+
+
 
 #carouselExampleIndicators .carousel-inner{
     height: 100vh;
@@ -34,6 +55,9 @@ h3{
     justify-content: center;
     align-items: center;
 }
+#kategori .card{
+    text-decoration: none;
+}
 
 
 #pelayanan .row .col .card{
@@ -44,4 +68,57 @@ h3{
     background-color: orange;
     width: 100vw;
     position: relative;
+}
+
+
+#carouselExampleAutoplaying .carousel-inner{
+    width: 100vw;
+    height: 100vh;
+
+}
+#carouselExampleAutoplaying .carousel-inner .pesan {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    right: 800px;
+    padding: 2em;
+    font-size: 2em;
+    border-radius: 20px;
+
+}
+
+#youtube {
+    display: grid;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+#youtube .container {
+    margin:  5em;
+    width: 100vw;
+    height: 70vh;
+}
+
+
+#pesan form {
+}
+
+  /*---------------------------------------
+     FOOTER              
+  -----------------------------------------*/
+
+#footer .container-md-1{
+
+}
+#footer .container-md-1 .contact-info a{
+    margin: 0 0.5em;
+
+}
+#footer .container-md-1 .nav{
+    display: grid;
+}
+#footer .container-md-1 .nav a,#footer .container-md-1 .contact-info a{
+    color: rgb(102, 102, 102);
+    text-decoration: none;
 }

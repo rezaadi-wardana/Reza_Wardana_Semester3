@@ -23,7 +23,7 @@ if (isset($_POST['create'])) {
 
 <h1 class="text-center">Add Survei details</h1>
 <div class="container">
-    <form action="" method="post">
+    <form action="" method="post" >
 
         <div class="form-group">
             <label for="icon" class="for-label">Icon</label>

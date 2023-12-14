@@ -3,7 +3,7 @@
 
 <?php 
 if (isset($_POST['create'])) {
-    $icon = $_POST['icon'];
+    // $icon = $_FILES['icon'];
     $judul = $_POST['judul'];
     $link = $_POST['link'];
 
@@ -18,12 +18,14 @@ if (isset($_POST['create'])) {
     }else{
         echo "<script type='text/javascript'> alert('Menambahkan Data Berhasil!')</script>";
     }
+  
+
 }
 ?>
 
 <h1 class="text-center">Add Survei details</h1>
 <div class="container">
-    <form action="" method="post" >
+    <form action="" method="post" enctype="multipart/form-data">
 
         <div class="form-group">
             <label for="icon" class="for-label">Icon</label>
@@ -50,6 +52,7 @@ if (isset($_POST['create'])) {
     </form>
 </div>
 
+
 <!-- a BACK button to go to the home page -->
 <div class="container text-center mt-5">
 <a href="home.php" class="btn btn-warning mt-5"> Back 
@@ -58,3 +61,40 @@ if (isset($_POST['create'])) {
 
 <!-- Footer -->
 <?php include "../footer.php" ?>
+
+ <?php 
+// if(!$icon){
+//     return false ; 
+// }
+
+// function upload(){
+//     $namafile = $_FILES['icon']['name'];
+//     $ukuranfile = $_FILES['icon']['size'];
+//     $error = $_FILES['icon']['error'];
+//     $tmpName = $_FILES['icon']['tmp_name'];
+//     if ($error === 4){
+//         echo "<script>
+//         alert('pilih gambar dulu!
+//         </script>";
+//         return false;
+//     }
+// }
+
+// $extensiGambarValid = ['jpq','png','jpeg'];
+// $extensiGambar = explode('.', $namafile);
+// $extensiGambar = strtolower(end( $extensiGambar));
+// if (in_array($extensiGambar,$extensiGambarValid)){
+//     echo "<script>
+//     alert('yang anda upload bukan gambar!')
+//     </script>";
+//     return false;
+
+// }
+
+///lolos
+// move_uploaded_file($tmpName, 'images');
+
+
+// 
+
+?>

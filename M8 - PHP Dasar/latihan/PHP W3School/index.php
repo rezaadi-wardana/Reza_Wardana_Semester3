@@ -240,7 +240,8 @@ $jawab = $suka ? "iya": "tidak";
 echo $jawab;
 ?>
 
-<
+</body>
+
 
 
 

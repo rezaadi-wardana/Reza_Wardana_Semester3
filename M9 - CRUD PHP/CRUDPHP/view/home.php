@@ -25,7 +25,7 @@
             //displaying all the data retrieved from the database using while lop
             while ($row = mysqli_fetch_assoc($view_users)){
                 $id = $row ['ID'];
-                $user = $row['password'];
+                $user = $row['username'];
                 $email = $row['email'];
                 $pass = $row['password'];
 
@@ -34,8 +34,8 @@
                 echo "<td > {$user}</td>";
                 echo "<td > {$email}</td>";
                 echo "<td > {$pass}</td>";
-                echo "<td class='text-center'> <a href='read.php?user_id={$id}' class='btn btn-primary'> <i class='bi bi-eye'></i>View</a></td>";
-                echo "<td class='text-center'> <a href='update.php?edit&user_id={$id}' class='btn btn-secondary'> <i class='bi bi-pencil'></i>EDIT</a></td>";
+                echo "<td class='text-center'> <a href='read.php?user_id={$id}' class='btn btn-primary'> <i class='bi bi-eye'></i>READ</a></td>";
+                echo "<td class='text-center'> <a href='update.php?edit&user_id={$id}' class='btn btn-secondary'> <i class='bi bi-pencil'></i>UPDATE</a></td>";
                 echo "<td class='text-center'> <a href='delete.php?delete={$id}' class='btn btn-danger'> <i class='bi bi-trash'></i>DELETE</a></td>";
             }
             ?>

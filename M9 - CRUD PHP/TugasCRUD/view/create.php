@@ -6,9 +6,17 @@ if (isset($_POST['create'])) {
     // $icon = $_FILES['icon'];
     $judul = $_POST['judul'];
     $link = $_POST['link'];
+    $icon = $_FILES['icon']['name'];
+    $tmp = $_FILES['icon']['tmp_name'];
 
+        // Rename nama fotonya dengan menambahkan tanggal dan jam upload
+$fotobaru = date('dmYHis').$icon;
+// Set path folder tempat menyimpan fotonya
+$path = "images/".$fotobaru;
+// Proses upload
+if(move_uploaded_file($tmp, $path)){
     //SQL query to insert user data into the users table
-    $query = "INSERT INTO survei(icon,judul, link) VALUES('{$icon}','{$judul}','{$link}')";
+    $query = "INSERT INTO survei(icon,judul, link) VALUES('{$fotobaru}','{$judul}','{$link}')";
     $add_judul = mysqli_query($conn, $query);
 
     //dispaying proper message for the user to see wheter the query excuted perfectly or not
@@ -21,6 +29,8 @@ if (isset($_POST['create'])) {
   
 
 }
+}
+
 ?>
 
 <h1 class="text-center">Add Survei details</h1>

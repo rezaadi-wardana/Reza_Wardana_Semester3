@@ -16,29 +16,51 @@ while ($row = mysqli_fetch_assoc($view_survei)) {
     $icon = $row['icon'];
     $judul = $row['judul'];
     $link = $row['link'];
+   
 }
 
 //Processing form data when form is submitted
 if (isset($_POST['update'])) {
-    $icon = $_POST['icon'];
+    // $icon = $_POST['icon'];
     $judul = $_POST['judul'];
     $link = $_POST['link'];
+    $icon = $_FILES['icon']['name'];
+    $tmp = $_FILES['icon']['tmp_name'];
 
-// SQL query to update the data in user table where the id = $userid 
-    $query = "UPDATE survei SET icon = '{$icon}' ,judul = '{$judul}' , link = '{$link}' WHERE id_survei = $surveiid";
+$fotobaru = date('dmYHis').$icon;
+// Set path folder tempat menyimpan fotonya
+    $path = "images/".$fotobaru;
+
+if(move_uploaded_file($tmp, $path)){
+    $query = "UPDATE survei SET icon = '{$fotobaru}' ,judul = '{$judul}' , link = '{$link}' WHERE id_survei = $surveiid";
     $update_user = mysqli_query($conn, $query);
+
+//dispaying proper message for the user to see wheter the query excuted perfectly or not
+if (!$update_user ) {
+    echo "something went wrong ". mysqli_error($conn);
+    
+}else{
+   
     echo "<script type='text/javascript'>alert('Mengedit Data Berhasil')</script>";
     }
+}
+}
+// SQL query to update the data in user table where the id = $userid 
+    // $query = "UPDATE survei SET icon = '{$fotobaru}' ,judul = '{$judul}' , link = '{$link}' WHERE id_survei = $surveiid";
+    // $update_user = mysqli_query($conn, $query);
+
+    // echo "<script type='text/javascript'>alert('Mengedit Data Berhasil')</script>";
+    // }
 ?>
 
 <h1 class="text-center">Update Survei Details</h1>
 
 <div class="container ">
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="icon">Icon</label>
-        <input type="file" name="icon" class="form-control" value="<?php echo $icon ?>">
+        <input type="file" name="icon" class="form-control" value="<?php echo $fotobaru ?>">
 
     </div>
     

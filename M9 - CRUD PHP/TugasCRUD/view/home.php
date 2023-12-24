@@ -2,13 +2,13 @@
 <?php include "../header.php" ?>
 
 <div class="container">
-    <h1 class="text-center">Data Survei</h1>
-    <a href="create.php" class="btn  btn-outline-dark mb-2"><i class="bi bi-person-plus"></i>Create New User</a>
+    <h1 class="text-center">DATA SURVEI</h1>
+    <a href="create.php" class="btn  btn-outline-dark mb-2"><i class="bi bi-person-plus"></i>Create New Survei</a>
 
     <table class="table table-striped table-bordered table-hover">
         <thead class="table-dark">
             <tr>
-                <th scope="col">ID Survei</th>
+                <!-- <th scope="col">ID Survei</th> -->
                 <th scope="col">Icon</th>
                 <th scope="col">Judul</th>
                 <th scope="col">Link</th>
@@ -30,16 +30,17 @@
                 $link = $row['link'];
 
                 echo "<tr>";
-                echo "<th scope='row'> {$id}</th>";
-                echo "<td ><img src='{$icon}'> </td>";
+                // echo "<th scope='row'> {$id}</th>";
+                echo "<td ><img src='images/".$icon."' width='100' height='100'> </td>";
                 echo "<td > {$judul}</td>";
                 echo "<td > {$link}</td>";
-                echo "<td class='text-center'> <a href='read.php?survei_id={$id}' class='btn btn-primary'> <i class='bi bi-eye'></i>View</a></td>";
-                echo "<td class='text-center'> <a href='update.php?edit&survei_id={$id}' class='btn btn-secondary'> <i class='bi bi-pencil'></i>EDIT</a></td>";
-                echo "<td class='text-center'> <a href='delete.php?delete={$id}' class='btn btn-danger'> <i class='bi bi-trash'></i>DELETE</a></td>";
+                echo "<td class='text-center'> <a href='read.php?survei_id={$id}' class='btn btn-primary'> <i class='bi bi-eye'></i>READ</a></td>";
+                echo "<td class='text-center'> <a href='update.php?edit&survei_id={$id}' class='btn btn-secondary'> <i class='bi bi-pencil'></i>UPDATE</a></td>";
+                echo "<td class='text-center'> <a href='confirm.php?delete={$id}' class='btn btn-danger'><i class='bi bi-trash'></i>DELETE</a></td>";
             }
             ?>
         </tr>
     </tbody>
     </table>
+    
 </div>

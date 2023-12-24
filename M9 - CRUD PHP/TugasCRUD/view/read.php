@@ -26,14 +26,14 @@
             
             while ($row = mysqli_fetch_assoc($view_survei)){
                 $id = $row['id_survei'];
-                $icon = $row['icno'];
+                $icon = $row['icon'];
                 $judul = $row['judul'];
                 $link = $row['link'];
                
 
                 echo "<tr >";
                 echo " <td >{$id}</td>";
-                echo " <td > {$icon}</td>";
+                echo " <td > <img src='images/".$icon."' width='100' height='100'> {$icon}</td>";
                 echo " <td > {$judul}</td>";
                 echo " <td > {$link}</td>";
                 echo " </tr> ";

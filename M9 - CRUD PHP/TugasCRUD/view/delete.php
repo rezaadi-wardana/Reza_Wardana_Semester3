@@ -2,7 +2,6 @@
 <?php include "../header.php" ?>
 <?php
 
-
 if (isset($_GET['delete'])) {
     $surveiid = $_GET['delete'];
     // SQL query to delete data from user table where id = $userid

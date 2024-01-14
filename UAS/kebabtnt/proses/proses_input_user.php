@@ -21,7 +21,9 @@ if (!empty($_POST['input_user_validate'])) {
         window.location="../user"
         </script>';
         } else {
-            $message = '<script>alert("Data gagal dimasukkan")</script>';
+            $message = '<script>alert("Data gagal dimasukkan")
+        window.location="../user"
+        </script>';
         }
     }
 }

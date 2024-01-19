@@ -16,18 +16,29 @@
                     <li class="nav-item">
                       <a class="nav-link <?php echo ((isset($_GET['x']) && $_GET['x']=='home') || !isset($_GET['x'])) ? 'active link-light bg-dark' : 'link-dark bg-light' ; ?>  ps-2" aria-current="page" href="home" ><i class="bi bi-house-fill"></i> Dasboard</a>
                     </li>
+                    <?php if($hasil['level']==1 || $hasil['level']==3 ){?>
                     <li class="nav-item">
                       <a class="nav-link <?php echo (isset($_GET['x']) && $_GET['x']=='menu') ? 'active link-light bg-dark' : 'link-dark bg-light' ; ?> ps-2" href="menu"><i class="bi bi-list-task"></i> Daftar Menu</a>
                     </li>
+                    <?php } ?>
+                    <?php if($hasil['level']==1){?>
                     <li class="nav-item">
                       <a class="nav-link <?php echo (isset($_GET['x']) && $_GET['x']=='katmenu') ? 'active link-light bg-dark' : 'link-dark bg-light' ; ?> ps-2" href="katmenu"><i class="bi bi-tags-fill"></i> Kategori Menu</a>
                     </li>
+                    <?php } ?>
+                      <?php if($hasil['level']==1 || $hasil['level']==2 || $hasil['level']==3) {?>
+
                     <li class="nav-item">
                       <a class="nav-link <?php echo (isset($_GET['x']) && $_GET['x']=='order') ? 'active link-light bg-dark' : 'link-dark bg-light' ; ?> ps-2" href="order"><i class="bi bi-cart-fill"></i> Order</a>
                     </li>
+
+                    <?php } ?>
+
+                    <?php if($hasil['level']==1 || $hasil['level']==4)  {?>
                     <li class="nav-item">
-                      <a class="nav-link <?php echo (isset($_GET['x']) && $_GET['x']=='customer') ? 'active link-light bg-dark' : 'link-dark bg-light' ; ?> ps-2" href="customer"><i class="bi bi-people-fill"></i> Customer</a>
+                      <a class="nav-link <?php echo (isset($_GET['x']) && $_GET['x']=='dapur') ? 'active link-light bg-dark' : 'link-dark bg-light' ; ?> ps-2" href="dapur"><i class="bi bi-fire"></i> Dapur</a>
                     </li>
+                    <?php } ?>
                 
                     <?php if($hasil['level']==1){?>
                     

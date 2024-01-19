@@ -15,11 +15,11 @@ if(!empty($_POST['submit_validatee'])){
         $_SESSION['username_kebabtnt'] = $username;
         $_SESSION['level_kebabtnt'] = $hasil['level'];
         $_SESSION['id_kebabtnt'] = $hasil['id'];
-        header('location:../home');
+        header('location:../home');//ketika benar user diarahkan ke lokasi file utaama
     }else{ ?>
     <script>
         alert('Username dan Password Salah');
-        window.location = '../login'
+        window.location = '../login';//ketika benar user diarahkan ke lokasi file login
     </script>
     <?php
     }

@@ -354,8 +354,8 @@ $select_kat_menu = mysqli_query($conn, "SELECT id_kat_menu, kategori_makanan FRO
       }
 
         ?>
-        <div class="table-responsive">
-          <table class="table table-dark table-hover">
+        <div class="table-responsive text-light mt-3">
+          <table class="table table-dark table-hover" id="example">
             <thead>
               <tr>
                 <th scope="col">No</th>

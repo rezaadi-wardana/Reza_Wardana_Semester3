@@ -13,7 +13,7 @@ if(!empty($_POST['input_user_validate'])){
         </script>';
     }else{
         $message = '<script>alert("Data gagal dihapus");
-        window.location="../menu"
+        window.location="../user"
         </script>';
     }
 }echo $message;

@@ -64,16 +64,16 @@ $select_kat_menu = mysqli_query($conn, "SELECT id_kat_menu, kategori_makanan FRO
                 <div class="row">
                   <div class="col-lg-4">
                     <div class="form-floating mb-3">
-                      <select class="form-select" aria-label="Default select example" name="kat_menu" required>
-                        <option selected hidden value="">Pilih Kategori Menu</option>
+                      <select class="form-select" aria-label="Default select example" name="kat_menu" id="qqq" required>
                         <?php
                         foreach ($select_kat_menu as $value) {
                           echo "<option value=" . $value['id_kat_menu'] . ">$value[kategori_makanan]</option>";
                         }
                         ?>
                       </select>
-                      <label for="floatingInput">Kategori Makanan</label>
+                      <label for="qqq">Kategori Makanan</label>
                       <div class="invalid-feedback">
+                        <input type="text">
                         Pilih Kategori Makanan
                       </div>
                     </div>
@@ -99,6 +99,7 @@ $select_kat_menu = mysqli_query($conn, "SELECT id_kat_menu, kategori_makanan FRO
                     </div>
                   </div>
                 </div>
+
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                   <button type="submit" class="btn btn-primary" name="input_menu_validate" value="123456">Save
@@ -114,7 +115,7 @@ $select_kat_menu = mysqli_query($conn, "SELECT id_kat_menu, kategori_makanan FRO
 
       <?php
             if (empty($result)) {
-              echo "<span class='text-light'> Data Makansn stsu minumsn tidak ada</span>";
+              echo "<span class='text-light'> Data Makanan atau Minuman Tidak ada</span>";
             } else {
       foreach ($result as $row) {
         ?>
@@ -159,28 +160,7 @@ $select_kat_menu = mysqli_query($conn, "SELECT id_kat_menu, kategori_makanan FRO
                         </div>
 
                       </div>
-                      <div class="col-lg-12">
-                        <div class="form-floating mb-3">
-                          <select disabled class="form-select" aria-label="Default select example" required
-                            value="<?php echo $row['kategori'] ?>">
-                            <option selected hidden value="">Pilih Kategori Menu</option>
-                            <?php
-                            foreach ($select_kat_menu as $value) {
-                              if ($row['kategori'] == $value['id_kat_menu']) {
-                                echo "<option selected value=" . $value['id_kat_menu'] . ">$value[kategori_makanan]</option>";
-                              } else {
-                                echo "<option value=" . $value['id_kat_menu'] . ">$value[kategori_makanan]</option>";
-
-                              }
-                            }
-                            ?>
-                          </select>
-                          <label for="floatingInput">Kategori Makanan</label>
-                          <div class="invalid-feedback">
-                            Pilih Kategori Makanan
-                          </div>
-                        </div>
-                      </div>
+            
                       <div class="col-lg-12">
                         <div class="form-floating mb-3">
                           <input disabled type="number" class="form-control" id="floatingInput"
@@ -198,6 +178,28 @@ $select_kat_menu = mysqli_query($conn, "SELECT id_kat_menu, kategori_makanan FRO
                           <label for="floatingInput">Stok</label>
                           <div class="invalid-feedback">
                             Masukkan Stok Makanan
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="form-floating mb-3">
+                          <select disabled class="form-select" aria-label="Default select example" required
+                            value="<?php echo $row['kategori'] ?>" >
+                            <option selected hidden value="">Pilih Kategori Menu</option>
+                            <?php
+                            foreach ($select_kat_menu as $value) {
+                              if ($row['kategori'] == $value['id_kat_menu']) {
+                                echo "<option selected value=" . $value['id_kat_menu'] . ">$value[kategori_makanan]</option>";
+                              } else {
+                                echo "<option value=" . $value['id_kat_menu'] . ">$value[kategori_makanan]</option>";
+
+                              }
+                            }
+                            ?>
+                          </select>
+                          <label for="floatingInput">Kategori Makanan</label>
+                          <div class="invalid-feedback">
+                            Pilih Kategori Makanan
                           </div>
                         </div>
                       </div>
@@ -238,7 +240,7 @@ $select_kat_menu = mysqli_query($conn, "SELECT id_kat_menu, kategori_makanan FRO
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="input-group mb-3">
-                        <input type="file" class="form-control py-3" id="uploadFoto" placeholder="Your name" name="foto">
+                        <input required type="file" class="form-control py-3" id="uploadFoto" placeholder="Your name" name="foto">
 
                         <label for="uploadFoto" class="input-group-text">Upload Foto Menu</label>
                         <div class="invalid-feedback">
@@ -248,7 +250,7 @@ $select_kat_menu = mysqli_query($conn, "SELECT id_kat_menu, kategori_makanan FRO
                     </div>
                     <div class="col-lg-6">
                       <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Nama Menu"
+                        <input required type="text" class="form-control" id="floatingInput" placeholder="Nama Menu"
                           name="nama_menu" value="<?php echo $row['nama_menu'] ?>" >
                         <label for="floatingInput">Nama Menu</label>
                         <div class="invalid-feedback">
@@ -338,7 +340,7 @@ $select_kat_menu = mysqli_query($conn, "SELECT id_kat_menu, kategori_makanan FRO
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-danger" name="input_user_validate" value="123456">Hapus</button>
+                    <button type="submit" class="btn btn-danger" name="delete_mwnu_validate" value="123456">Hapus</button>
                   </div>
                 </form>
               </div>

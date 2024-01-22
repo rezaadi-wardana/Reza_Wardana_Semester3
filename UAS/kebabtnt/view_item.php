@@ -1,6 +1,13 @@
 <!-- CONTENT -->
-<?php
-include "proses/connect.php";
+
+<div class="container-lg">
+<div class="row mb-5">
+  <?php
+  include "proses/connect.php";
+
+  include "sidebar.php";
+
+
 
 $query = mysqli_query($conn, "SELECT *, SUM(harga*jumlah) AS harganya FROM tb_list_order
     LEFT JOIN tb_order ON tb_order.id_order = tb_list_order.kode_order
@@ -120,7 +127,8 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM daftar_menu");
     </div>
 
   </div>
-
+</div>
+</div>
 
 
 

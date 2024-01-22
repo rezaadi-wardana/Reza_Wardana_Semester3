@@ -41,7 +41,9 @@
 
 </head>
 
-<body class=" <?php echo (isset($_GET['x']) && $_GET['x']=='tentang')||(isset($_GET['x']) && $_GET['x']=='menu') ? 'sub_page': '';?>" >
+<body
+  class=" <?php echo (isset($_GET['x']) && ($_GET['x'] == 'tentang')) || ((isset($_GET['x']) && $_GET['x'] == 'dashboard')) || ((isset($_GET['x']) && $_GET['x'] == 'menuheader')) ? 'sub_page' : ''; ?>">
+
   
 
     <!-- header section strats -->

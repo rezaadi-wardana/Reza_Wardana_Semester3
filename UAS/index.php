@@ -2,11 +2,11 @@
     <?php
   
     if (isset($_GET['x']) && $_GET['x']=='beranda'){
-      $page = "home.php";
+      $page = "beranda.php";
       include "main.php";
     } else
-    if (isset($_GET['x']) && $_GET['x']=='menu'){
-      $page = "menu.php";
+    if (isset($_GET['x']) && $_GET['x']=='menuheader'){
+      $page = "menuheader.php";
       include "main.php";
     } else
     if (isset($_GET['x']) && $_GET['x']=='tentang'){

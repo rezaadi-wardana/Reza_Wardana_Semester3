@@ -33,8 +33,8 @@ while ($record = mysqli_fetch_array($query)) {
                   <div class="col-lg-6">
                     <div class="form-floating mb-3">
                       <select class="form-select" name="jenis_menu" id="">
-                        <option value="1">Kebab</option>
-                        <option value="1">Burger</option>
+                        <option value="1">Makanan</option>
+                        <option value="2">Minuman</option>
                       </select>
                       <label for="floatingInput">Jenis Menu</label>
                       <div class="invalid-feedback">
@@ -68,7 +68,9 @@ while ($record = mysqli_fetch_array($query)) {
       <!-- AKHIR MODAL TMABH KATEGORI BARU-->
 
       <?php
-
+      if (empty($result)) {
+        echo "";}
+        else{
       foreach ($result as $row) {
 
         ?>
@@ -89,7 +91,7 @@ while ($record = mysqli_fetch_array($query)) {
                       <div class="form-floating mb-3">
                         <select name="jenis_menu" class="form-select" aria-label="Default select example" id="">
                           <?php
-                          $data = array("Kebab", "Burger");
+                          $data = array("Makanan", "Minuman");
                           foreach ($data as $key => $value) {
                             if ($row["jenis_menu"] == $key + 1) {
                               echo "<option selected value=" . ($key + 1) . ">$value</option>";
@@ -158,9 +160,9 @@ while ($record = mysqli_fetch_array($query)) {
         <!-- AKHIR MODAL DELETE-->
 
         <?php
-      }
+      }}
       if (empty($result)) {
-        echo "Data user tidak ada";
+        echo "<p class='text-light'> Data Kategori Menu Tidak Ada</p>";
       } else {
         ?>
 
@@ -185,7 +187,7 @@ while ($record = mysqli_fetch_array($query)) {
                     <?php echo $no++ ?>
                   </th>
                   <td>
-                    <?php echo ($row['jenis_menu'] == 1) ? "Kebab" : "Burger"; ?>
+                    <?php echo ($row['jenis_menu'] == 1) ? "Makanan" : "Minuman"; ?>
                   </td>
                   <td>
                     <?php echo $row['kategori_makanan'] ?>

@@ -26,7 +26,7 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM daftar_menu");
 
       <?php
       if (empty($result)) {
-        echo "<span class='text-light'> Data Makansn stsu minumsn tidak ada</span>";
+        echo "<span class='text-light'> Data Dapur Tidak Ada </span>";
       } else {
 
         foreach ($result as $row) {
@@ -49,13 +49,13 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM daftar_menu");
                       <div class="col-lg-8">
                         <div class="form-floating mb-3">
                           <select disabled class="form-select" name="menu" id="">
-                            <option value="" selected hidden> PIlih Menu</option>
+                            <!-- <option value="" selected hidden> PIlih Menu</option> -->
                             <?php
                             foreach ($select_menu as $value) {
                               if ($row['menu'] == $value['id']) {
-                                echo "<option value=$value[id]>$value[nama_menu]</option>";
+                                echo "<option selected value=".$value['id'].">$value[nama_menu]</option>";
                               } else {
-                                echo "<option value=$value[id]>$value[nama_menu]</option>";
+                                echo "<option value=".$value['id'].">$value[nama_menu]</option>";
                               }
 
                             }
@@ -120,9 +120,9 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM daftar_menu");
                             <?php
                             foreach ($select_menu as $value) {
                               if ($row['menu'] == $value['id']) {
-                                echo "<option value=$value[id]>$value[nama_menu]</option>";
+                                echo "<option selected value='$value[id]'>$value[nama_menu]</option>";
                               } else {
-                                echo "<option value=$value[id]>$value[nama_menu]</option>";
+                                echo "<option value='$value[id]'>$value[nama_menu]</option>";
                               }
 
                             }

@@ -56,9 +56,8 @@ while ($record = mysqli_fetch_array($query)) {
                       <select class="form-select" aria-label="Default select example" name="level" required>
                         <option selected hidden value="">Pilih Level User</option>
                         <option value="1">Owner/Admin</option>
-                        <option value="2">Kasir</option>
-                        <option value="3">Pelayan</option>
-                        <option value="3">Dapur</option>
+                        <option value="2">Penjual</option>
+                        <option value="3">Pelanggan</option>
                       </select>
                       <label for="floatingInput">Label User</label>
                       <div class="invalid-feedback">
@@ -138,7 +137,7 @@ while ($record = mysqli_fetch_array($query)) {
                       <div class="form-floating mb-3">
                         <select disabled name="level" class="form-select" aria-label="Default select example" id="">
                           <?php
-                          $data = array("Owner/Admin", "Kasir", "Pelayan", "Dapur");
+                          $data = array("Owner/Admin", "Penjual", "Pelanggan");
                           foreach ($data as $key => $value) {
                             if ($row["level"] == $key + 1) {
                               echo "<option selected value=" . ($key + 1) . ">$value</option>";
@@ -222,7 +221,7 @@ while ($record = mysqli_fetch_array($query)) {
                       <div class="form-floating mb-3">
                         <select name="level" class="form-select" aria-label="Default select example" id="">
                           <?php
-                          $data = array("Owner/Admin", "Kasir", "Pelayan", "Dapur");
+                          $data = array("Owner/Admin", "Penjual", "Pelanggan");
                           foreach ($data as $key => $value) {
                             if ($row["level"] == $key + 1) {
                               echo "<option selected value=" . ($key + 1) . ">$value</option>";
@@ -372,12 +371,10 @@ while ($record = mysqli_fetch_array($query)) {
                     <?php if ($row['level'] == 1) {
                       echo "Admin";
                     } else if ($row['level'] == 2) {
-                      echo "Kasir";
+                      echo "Penjual";
                     } else if ($row['level'] == 3) {
-                      echo "Pelayan";
-                    } else if ($row['level'] == 4) {
-                      echo "Dapur";
-                    } ?>
+                      echo "Pelanggan";
+                    }  ?>
                   </td>
                   <td>
                     <?php echo $row['nohp'] ?>

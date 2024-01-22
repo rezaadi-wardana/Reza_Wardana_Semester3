@@ -85,7 +85,7 @@ while ($record = mysqli_fetch_array($query)) {
 
       <?php
       if (empty($result)) {
-        echo "<span class='text-light'> Data Makansn stsu minumsn tidak ada</span>";
+        echo "<span class='text-light'> Data Order Tidak Ada </span>";
       } else {
         foreach ($result as $row) {
 

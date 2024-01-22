@@ -1,46 +1,73 @@
-<nav class="navbar navbar-expand-lg custom_nav-container bg-dark navbar-dark sticky-top">
-<?php  
+<?php
 include "proses/connect.php";
 
-$query =  mysqli_query($conn,"SELECT * FROM user WHERE username='$_SESSION[username_kebabtnt]'");
+$query = mysqli_query($conn, "SELECT * FROM user WHERE username='$_SESSION[username_kebabtnt]'");
 $records = mysqli_fetch_array($query);
 ?>
 
-  <div class=" container-lg">
-    <a class="navbar-brand collapse navbar-collapse" href=".">
-      <div class="d-flex" id="logo"><img src="assets/img/LOGODARK.png" alt="" width="30rem">
-   
-      <span
-          class="collapse navbar-collapse ps-2">Kebab Burger TNT</span></div>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+<div class="hero_area">
+  <div class="bg-box">
+    <img src="images/hero-bg.jpg" st alt="">
+  </div>
 
-    <div class=" justify-content-end" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <header class="header_section">
+    <div class="container-lg">
+      <nav class="navbar navbar-expand-lg custom_nav-container sticky-top">
 
-            <?php echo $hasil['username']; ?>
+        <a class="navbar-brand text-align-center " href=".">
+          <span class=" d-flex">
+            <div class=" me-3 collapse navbar-collapse" id="logo"><img src="assets/img/LOGODARK.png" alt=""
+                width="50rem" height="50rem">
+              </div>
+                 Kebab Burger TNT
+          </span>
           </a>
-          
-          
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class=""> </span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav justify-content-start">
+        <li
+          class="nav-item <?php echo (isset($_GET['x']) && $_GET['x'] == 'beranda') || !isset($_GET['x']) ? 'active' : ''; ?>">
+          <a class="nav-link" href="beranda ">Beranda </a>
+        </li>
+        <li class="nav-item  <?php echo (isset($_GET['x']) && $_GET['x'] == 'menuheader') ? 'active' : ''; ?>">
+          <a class="nav-link" href="menuheader">Menu</a>
+        </li>
+        <li class="nav-item <?php echo (isset($_GET['x']) && $_GET['x'] == 'tentang') ? 'active' : ''; ?>">
+          <a class="nav-link " href="tentang">Tentang</a>
+        </li>
+        <li class="nav-item <?php echo (isset($_GET['x']) && $_GET['x'] == 'home') ? 'active' : ''; ?>">
+          <a class="nav-link " href="home">Dashboard</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-warning" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false" style="text-transform: lowercase;">
+            <span>
+              <?php echo $hasil['username']; ?>
+              <i class="bi bi-person-fill"></i>
+            </span>
+          </a>
           <ul class="dropdown-menu dropdown-menu-end mt-2">
-            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalUbahProfil"><i class="bi bi-person-square"></i> Profil</a></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalUbahProfil"><i
+                  class="bi bi-person-square"></i> Profil</a></li>
             <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalUbahPassword"><i
                   class="bi bi-arrow-repeat"></i></i>Ubah Password</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
             <li><a class="dropdown-item" href="logout"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
-
           </ul>
         </li>
       </ul>
     </div>
-  </div>
-</nav>
+    </nav>
+</div>
+</header>
 
 <!-- MODAL UBAH PASSWORD-->
 <div class="modal fade" id="modalUbahPassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -107,7 +134,6 @@ $records = mysqli_fetch_array($query);
   </div>
 </div>
 
-
 <!-- AKHIR MODAL UBAH PASSWORD-->
 
 <!-- MODAL UBAH PROFIL-->
@@ -133,7 +159,8 @@ $records = mysqli_fetch_array($query);
             </div>
             <div class="col-lg-4">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingNama" name="nama" value="<?php echo $records['nama'] ?>">
+                <input type="text" class="form-control" id="floatingNama" name="nama"
+                  value="<?php echo $records['nama'] ?>">
                 <label for="floatingNama">Nama</label>
                 <div class="invalid-feedback">
                   Masukkan Nama Anda
@@ -142,20 +169,21 @@ $records = mysqli_fetch_array($query);
             </div>
             <div class="col-lg-4">
               <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="floatingNoHP" name="nohp" value="<?php echo $records['nohp'] ?>">
+                <input type="number" class="form-control" id="floatingNoHP" name="nohp"
+                  value="<?php echo $records['nohp'] ?>">
                 <label for="floatingNoHP">Nomor HP</label>
                 <div class="invalid-feedback">
                   Masukkan Nomor HP Anda.
                 </div>
               </div>
-          </div>
-          <div class="row">
-            
+            </div>
+            <div class="row">
+
             </div>
             <div class="col-lg-12">
               <div class="form-floating mb-3">
-              <textarea class="form-control" name="alamat" id=""
-                      style="height:100px"><?php echo $records['alamat'] ?></textarea>
+                <textarea class="form-control" name="alamat" id=""
+                  style="height:100px"><?php echo $records['alamat'] ?></textarea>
                 <label for="floatingPassword">Alamat</label>
                 <div class="invalid-feedback">
                   Masukkan Alamat Anda

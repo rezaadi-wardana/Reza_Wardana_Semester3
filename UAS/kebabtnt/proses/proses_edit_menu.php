@@ -11,7 +11,7 @@ $kode_rand = rand(10000, 99999)."-";
 
 $target_dir = "../assets/img/".$kode_rand;
 $target_file = $target_dir . basename($_FILES['foto']['name']);
-$imageType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+$imageType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION ));
 
 if (!empty($_POST['input_menu_validate'])) {
     //cek apakah gambar atau bukan

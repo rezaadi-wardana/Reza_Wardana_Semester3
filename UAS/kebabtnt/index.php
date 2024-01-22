@@ -85,7 +85,7 @@ if (isset($_GET['x']) && $_GET['x'] == 'home') {
     include "main.php";
   }
 } else {
-  $page = "home.php";
+  $page = "beranda.php";
   include "main.php";
 }
 ?>

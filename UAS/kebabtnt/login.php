@@ -202,9 +202,90 @@ if (!empty($_SESSION['username_kebabtnt'])) {
         </label>
       </div>
       <button class="btn btn-warning w-100 py-2" type="submit" name="submit_validatee" value="abc"> LOGIN</button>
-      <p class="mt-5 mb-3 text-light">&copy; 2024</p>
     </form>
+    <p class="mt-5 mb-3 text-light"> Belum Punya Akun? <button style="background:transparent; border:none;" data-bs-toggle="modal"
+        data-bs-target="#modalTambahUser"><b class="text-warning" >Register</b></button> </p>
+    <p class="mt-5 mb-3 text-light">&copy; 2024</p>
   </main>
+  <!-- MODAL TMABH USER BARU-->
+  <div class="modal fade" id="modalTambahUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-fullscreen-md-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">REGISTER</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="proses/proses_input_user.php" method="POST" class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Your name" name="nama"
+                    required>
+                  <label for="floatingInput">Nama</label>
+                  <div class="invalid-feedback">
+                    Masukkan Nama
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                    name="username" required>
+                  <label for="floatingInput">Username/Email</label>
+                  <div class="invalid-feedback">
+                    Masukkan Email
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form-floating mb-3">
+                  <select disabled class="form-select" aria-label="Default select example" name="level" required>
+                    <option selected value="3">Pelanggan</option>
+                  </select>
+                  <label for="floatingInput">Label User</label>
+                  <div class="invalid-feedback">
+                    Pilih Level User
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="form-floating mb-3">
+                  <input type="number" class="form-control" id="floatingInput" placeholder="08xxxxx" name="nohp">
+                  <label for="floatingInput">Nomor Handphone</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Passworde" disabled
+                  value="12345" name="password">
+                <label for="floatingInput">Password</label>
+              </div>
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" name="alamat" id="" style="height:100px"></textarea>
+              <label for="floatingInput">Alamat</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" name="input_user_validate" value="123456">Register</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- AKHIR MODAL TMABH USER BARU-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+
   <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (() => {

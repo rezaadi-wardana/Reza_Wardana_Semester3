@@ -262,7 +262,7 @@ if (!empty($_SESSION['username_kebabtnt'])) {
               <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Passworde" disabled
                   value="12345" name="password">
-                <label for="floatingInput">Password</label>
+                <label for="floatingInput">Password "password"</label>
               </div>
             </div>
             <div class="form-floating">

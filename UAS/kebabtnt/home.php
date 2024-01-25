@@ -82,21 +82,21 @@ $string_jumlah_pesanan = implode(',', $array_jumlah_pesanan);
   </div>
   <!-- JUDUL -->
 
-  <div class="card mt-4">
+  <div class="card mt-4 bg-dark text-light">
     <div class="card-body">
-      <h5 class="card-title">KEBAB BURGER TNT - APLIKASI </h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.l Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Adipisci illum mollitia quod omnis illo, nihil doloribus natus non? Excepturi
-        alias tempore quisquam unde sequi quasi?</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">SELAMAT DATANG DI DASHBOARD KEBAB BURGER TNT </h5>
+      <p class="card-text">Segera kunjungi kami dan nikmati ledakan rasa di setiap gigitan. Resto Kebab Burger TNT adalah tempat di
+            mana kebaikan kuliner dan kegembiraan bertemu dalam setiap hidangan yang kami sajikan. Selamat menikmati
+            pengalaman kuliner yang luar biasa di TNT!</p>
+      <a href="order" class="btn btn-warning">Pesan Sekarang</a>
     </div>
   </div>
 
 <!-- END JUDUL -->
 <!-- CHART -->
 
-<div class="card mt-4 border-0 bg-light">
-  <div class="card-body">
+<div class="card mt-4 border-0 bg-dark ">
+  <div class="card-body ">
     <div>
       <canvas id="myChart"></canvas>
     </div>

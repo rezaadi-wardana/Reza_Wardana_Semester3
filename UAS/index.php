@@ -1,5 +1,7 @@
 
     <?php
+
+    // mengecek GET dari header yang ditekan
   
     if (isset($_GET['x']) && $_GET['x']=='beranda'){
       $page = "beranda.php";
@@ -16,7 +18,7 @@
     if (isset($_GET['x']) && $_GET['x']=='login'){
       include "login.php";
     } else{
-      $page = "home.php";
+      $page = "beranda.php";
       include "main.php";
     }
 

@@ -1,5 +1,6 @@
 <?php
 session_start();
+    // mengecek GET dari header yang ditekan
 
 if (isset($_GET['x']) && $_GET['x'] == 'home') {
   $page = "home.php";

@@ -59,7 +59,7 @@ $select_kat_menu = mysqli_query($conn, "SELECT id_kat_menu, kategori_makanan FRO
       
               <div class="btn-box ">
                 <a href="tentang" class="text-dark" style="text-decoration: none;">
-                  Lebih Lanjut..
+                 Tahu Lebih Lanjut..
                 </a>
               </div>
 </section>
